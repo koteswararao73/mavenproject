@@ -17,23 +17,7 @@ pipeline {
             deploy adapters: [tomcat9(credentialsId: '8f923185-5e4f-4d2d-ae92-96e32c4535db', path: '', url: 'http://54.146.81.45:8080/')], contextPath: null, war: '**/*.war'
         }
         }
-	stage('deploytocontainerdockerimage') {
-        steps {
-		     sh '''docker build -t koti .
-                '''
-			}
-			}
-	stage(pushto dockerhub') {
-	    steps {
-		  sh '''
-         docker pull koteswarararaosairi/koti:latest
-         docker run -d -p 2292:80 koteswarararaosairi/koti
-       
-       '''
-	   }
-	   }	   }
-	}
-}	
-
+}
+}
 	
 	   
