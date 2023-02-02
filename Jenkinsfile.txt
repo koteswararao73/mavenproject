@@ -19,8 +19,8 @@ pipeline {
         }
     stage('archieve') {
         steps {
-             sh ''' docker build -t mywebapp .
-                    docker run -d -p 5555:8080 mywebapp
+             sh ''' docker build -t koti .
+                    docker run -d -p 5555:8080 koti:latest
                 '''
         }
     }
