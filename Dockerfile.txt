@@ -1,6 +1,12 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:8.0-alpine
 
-# Maintainer 
-MAINTAINER "koteswararao" 
-COPY ./ /usr/local/tomcat/webapps
+MAINTAINER KOTI koteswararaosairi@gmail.com
+
+
+
+WORKDIR /usr/local/tomcat
+
+COPY **/*.war /usr/local/tomcat/webapps/app.war
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
