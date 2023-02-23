@@ -1,12 +1,11 @@
 FROM tomcat:8.0-alpine
 
-MAINTAINER Hari harichowdary.java@gmail.com
+MAINTAINER koteswararaosairi@gamil.com
 
 
 
 WORKDIR /usr/local/tomcat
 
-COPY . /usr/local/tomcat/webapps/app.war
-
-EXPOSE 8080
+COPY . /usr/local/tomcat/webapps
 CMD ["catalina.sh", "run"]
+EXPOSE 8080
