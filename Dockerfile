@@ -1,8 +1,5 @@
 FROM tomcat:8.0-alpine
 
-MAINTAINER koteswararaosairi@gamil.com
-
-
 
 WORKDIR /usr/local/tomcat
 
